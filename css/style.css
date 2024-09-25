@@ -1,0 +1,107 @@
+/* Importa a fonte Oxanium do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+/* Reseta as margens e paddings padrão de todos os elementos e aplica o box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive; /* Aplica a fonte personalizada */
+}
+
+/* Estilo básico do body */
+body {
+  text-align: center; /* Centraliza o conteúdo em tela */
+  background: linear-gradient(to bottom, #6af0f5, #fff); /* Fundo com um gradiente do azul para branco */
+  min-height: 100vh; /* Garante que a altura mínima seja o tamanho da janela do navegador */
+}
+
+/* Container principal */
+main {
+  display: inline-block; /* Faz o main se comportar como um bloco, mas sem ocupar toda a largura */
+  margin-top: 2%; /* Espaçamento superior */
+  padding: 15px;
+  position: relative; /* Necessário para a posição dos elementos dentro do main */
+}
+
+/* Estilos para o contêiner da Pokédex */
+.pokedex {
+  width: 100%; /* Ocupará toda a largura disponível */
+  max-width: 425px; /* Define um tamanho máximo de 425px */
+}
+
+/* Estilo da imagem do Pokémon */
+.pokemon__image {
+  position: absolute; /* Posiciona a imagem de forma absoluta dentro do main */
+  bottom: 55%; /* Posiciona 55% a partir do fundo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-63%, 20%); /* Ajusta a posição para garantir que a imagem esteja no lugar correto */
+  height: 18%; /* Define a altura como 18% do container */
+}
+
+/* Estilo para os dados do Pokémon (nome e número) */
+.pokemon__data {
+  position: absolute;
+  font-weight: 600; /* Define a fonte com peso 600 (semi-bold) */
+  color: #aaa; /* Cor de fonte cinza clara */
+  top: 54.5%; /* Posiciona 54.5% a partir do topo */
+  right: 27%; /* Posiciona 27% a partir da direita */
+  font-size: clamp(8px, 5vw, 25px); /* Responsividade: fonte varia entre 8px e 25px, dependendo da largura da janela */
+}
+
+/* Estilo específico para o nome do Pokémon */
+.pokemon__name {
+  color: #3a444d; /* Cor do nome do Pokémon */
+  text-transform: capitalize; /* Capitaliza a primeira letra do nome */
+}
+
+/* Estilos do formulário de busca */
+.form {
+  position: absolute;
+  width: 65%; /* Largura de 65% do container */
+  top: 65%; /* Posiciona 65% a partir do topo */
+  left: 13.5%; /* Centraliza o formulário horizontalmente */
+}
+
+/* Campo de busca (input) */
+.input__search {
+  width: 100%; /* O campo ocupa toda a largura do formulário */
+  padding: 4%; /* Espaçamento interno */
+  outline: none; /* Remove o outline padrão */
+  border: 2px solid #333; /* Borda sólida escura */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: 600; /* Fonte com peso 600 */
+  color: #3a444d; /* Cor do texto */
+  font-size: clamp(8px, 5vw, 1rem); /* Tamanho responsivo da fonte */
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333; /* Sombra para dar efeito de profundidade */
+}
+
+/* Container dos botões de navegação */
+.buttons {
+  position: absolute;
+  bottom: 10%; /* Posiciona os botões 10% a partir do fundo */
+  left: 50%; /* Centraliza horizontalmente */
+  width: 65%; /* Largura dos botões */
+  transform: translate(-57%, 0); /* Ajusta o alinhamento horizontal */
+  display: flex; /* Flexbox para organizar os botões lado a lado */
+  gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilos gerais dos botões */
+.button {
+  width: 50%; /* Cada botão ocupa metade da largura do container */
+  padding: 4%; /* Espaçamento interno */
+  border: 2px solid #000; /* Borda preta */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: clamp(8px, 5vw, 1rem); /* Fonte responsiva */
+  font-weight: 600; /* Fonte com peso 600 */
+  color: white; /* Cor do texto */
+  background-color: #444; /* Cor de fundo cinza escuro */
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000; /* Sombra para o efeito 3D */
+}
+
+/* Efeito ao clicar nos botões */
+.button:active {
+  box-shadow: inset -4px 4px 0 #222; /* Sombra interna para dar um efeito de "pressionado" */
+  font-size: 0.9rem; /* Diminui levemente o tamanho da fonte ao clicar */
+}
